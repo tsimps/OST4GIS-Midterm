@@ -1,40 +1,45 @@
-# Midterm: Story Map
+# midterm-project
 
-## Project Outline
+## TO DO
+* !! Handle the odd routes like the G, R, etc. (probably needs to be done in R) !!
+* !! Fix popup options based on whether showing all stops or filtered by route !!
+* [partial]!! Rebuild slide 3 to showcase a particular neighborhood. Would be great to allow user input
+but basic functionality will suffice for the midterm !!
+  * Should be using total ridership data at each stop and also choosing routes (will need to search the routeNumbers field)
+  * [DONE] Add neighborhood boundaries and select the germantown for visual priority
+  * Find all of the routes that are in the neighborhood then allow user to toggle which ones to show
+  * Stretch: allow user to choose a neighborhood and automatically populate the routes and stops
+* !! Write a congestion rating formula that considers the avg speed and the
+  volatility to produce a congestion score !!
 
-For your midterm project, you will create a story map application for a dataset
-of your choosing. A story map tells a story through several slides, each slide
-combining text and data. The user is able to move forward and backwards through
-the slides by clicking on next and previous buttons.
+* Add popups across platform to aid user comprehension
+* Color stops on the route slides by direction
+  * Idea: write a pathOpts function outside of makeMarkers() that is called within
+* Integrate material design library with everything
+* Add some feature to slide 2 to make it more informative
+  * show routes that shop at the stop selected?
+  * Add paragraph
 
-## Requirements
 
-- Your story map should have at least five slides (extra interactivity
-  can reduce this requirement - ask if you're unsure)
-- Your story map should have next and previous buttons
-- On the first slide of your story map, the previous button should be hidden
-- On the last slide of your story map, the next button should be hidden
-- The application should be structured in a way where clicking on the next and
-previous buttons will replace the data on the map and the text in the sidebar
-with the next or previous content (in other words, you are not building five
-different maps with different text and data—you are building one map in which
-the content changes based on user input)
-- At least one slide should change the zoom level or center of the map; see
-fitBounds, setView, setZoom, and [related functions](http://leafletjs.com/reference.html#map-set-methods)
+## TO DONE
+* [DONE] Hide/show buttons and user input
+* [DONE] Create and read user input to show a specific route
+* [DONE] Read and use the new geojson for the route specific
+* [DONE] Write Slide 5 and the logic for displaying congestion Data
+* [DONE] Fix the bug where stop data is shown for stops that contain the similar route numbers (i.e. 117 and 17)
+* [DONE] User input on bus node sizes
+* [DONE] Style the route lines
+* [DONE] Filter out the point inside the geoJSON line file
+* [DONE] Figure out how to take out multiple routes and markers. Probably needs to rewrite markers and shapes are handled
+* [DONE] Figure out Slide 6 and write logic
+* [DONE] Figure out Slide 7 and write logic
+* [DONE] Add BSL/MFL to the map
+* [DONE] Add user option to the last two slides to take input on how many "best" and "worst" routes to show
+* [DONE] Change Broad & Olney slide to allow user to choose one of ~4 major transfer Nodes
 
-## Getting Started
-
-The midterm should be a new repository that you create on your personal github
-account. Create a new repository on GitHub.com and then clone it to your local
-machine using GitHub Desktop.
-
-## Prototype
-
-To see a visual representation of how the story map should work, take a look
-at this [clickable prototype](https://marvelapp.com/bf2c9h) that uses [Marvel](http://marvelapp.com)
-(similar to Figma). Please note that this prototype is only meant
-to represent the functionality of the story map. Feel free to use your own
-layout, color, and other styles, as long as the functionality is the same.
-Your story map will use a different dataset.
-
-Alternatively, see [individual screenshots](/images/).
+## EXTENTIONS FOR FINAL
+* Integrate Chart.js features to display statics on stops/routes
+* Find the markers currently in view, show the routes for those stops dynamically
+* Allow the user to select routes and do something
+* Add trolley ridership and MFL/BSL ridership and Data
+* Show routes with line-weight by ridership/load
